@@ -9,7 +9,6 @@ public class adamAsmacaOyunu {
     public static void main(String[] args) {
         String[] kelimeler ={"java","kodlama","css","programlama","değişken","html","javascript"};
         String secilenKelime=kelimeler[(int) (Math.random()* kelimeler.length)];
-        //System.out.println(secilenKelime);
 
         char[] harfler =new char[secilenKelime.length()];
 
@@ -48,9 +47,7 @@ public class adamAsmacaOyunu {
                 kelimeDogrumu=true;
                 System.out.println("tebrikler bildiniz :" + secilenKelime);
             }
-
         }
-
         if (!kelimeDogrumu || can==0){
             System.out.println("Bilemediniz kelime :" +secilenKelime);
         }
