@@ -16,10 +16,10 @@ public class C07_CheckedException {
 
         ancak java o konumda dosyanın var oldgundan emin  olmak ister
         o yuzden altını cizer
-       iki yolla duzeltilebilir
-       1- try catch ile exception handle edilebilir
-       2- dosya yolu dogru hata olusursa olussun
-       throw keyword
+        iki yolla duzeltilebilir
+        1- try catch ile exception handle edilebilir
+        2- dosya yolu dogru hata olusursa olussun
+        throw keyword
 
          */
 
