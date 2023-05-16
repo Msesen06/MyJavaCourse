@@ -32,6 +32,10 @@ public class Anamenu {
                 System.out.println("Güle Güle");
                 System.exit(0);
             }
+            default:{
+                System.out.println("hatalı giris");
+                menu();
+            }
         }
 
     }

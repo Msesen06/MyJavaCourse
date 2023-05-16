@@ -41,6 +41,10 @@ public class OgretmenIslemleri implements I01_GenelIslemler{
             case 'Q' :{
                 anamenu.menu();
             }
+            default:{
+                System.out.println("hatalı giris");
+                ogretmenMenu();
+            }
         }
     }
 
