@@ -3,8 +3,8 @@ package Mayis08_OkulYonetimi;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class OgretmenIslemleri {
-    ArrayList<Ogretmen> ogretmenList =new ArrayList<>();
+public class OgretmenIslemleri implements I01_GenelIslemler{
+    static ArrayList<Ogretmen> ogretmenList =new ArrayList<>();
     Anamenu anamenu =new Anamenu();
     //Öğretmen: Ad-Soyad,  kimlik No, yaş, bölüm, ve sicil No
     //kimlik no ile silme ve arama
@@ -44,7 +44,7 @@ public class OgretmenIslemleri {
         }
     }
 
-    private void silme() {
+    public void silme() {
         //kimlik no ile silme
         System.out.println("SİLİNECEK ÖĞRETMENİN TC'SİNİ GİRİNİZ");
         String tcNo=scanner.next();
@@ -67,7 +67,7 @@ public class OgretmenIslemleri {
 
     }
 
-    private void listeleme() {
+    public void listeleme() {
         for (Ogretmen each:ogretmenList
              ) {
             System.out.println(each);
@@ -77,7 +77,7 @@ public class OgretmenIslemleri {
         }
     }
 
-    private void arama() {
+   public void arama() {
         //kimlik no ile silme ve arama
         System.out.println("ARANACAK OGRETMENİN TC SİNİ GİRİNİZ");
         String tcNo =scanner.next();
@@ -100,7 +100,7 @@ public class OgretmenIslemleri {
 
     }
 
-    private void ekleme() {
+    public void ekleme() {
         scanner.nextLine();
         System.out.println("Ögretmenin adını giriniz :");
         String ad =scanner.nextLine();

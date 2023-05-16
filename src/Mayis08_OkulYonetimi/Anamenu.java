@@ -29,7 +29,8 @@ public class Anamenu {
 
             }
             case 'Q' :{
-
+                System.out.println("Güle Güle");
+                System.exit(0);
             }
         }
 
