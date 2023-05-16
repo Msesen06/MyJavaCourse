@@ -15,7 +15,12 @@ public class C02_BaziExceptionTurleri {
 
         String str ="Java";
         Object obj =str;
-        Integer sayi ;
+        //Integer sayi =(Integer) obj; ClassCastException
+        //FileNotFoundExcept
+        //IoException
+        //RuntimeException
+        //ArithmeticException
+        //InputMisMatchException
 
 
     }
