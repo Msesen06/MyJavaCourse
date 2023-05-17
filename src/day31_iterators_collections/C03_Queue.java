@@ -16,7 +16,18 @@ public class C03_Queue {
         yemekSirasi.add("Sevda");
         yemekSirasi.add("Veysel");
         yemekSirasi.add("Aysegul");
-
+        Queue<String> liste2 =new LinkedList<>();
         System.out.println(yemekSirasi);//[Muhammed, Sevda, Veysel, Aysegul]
+
+        System.out.println(yemekSirasi.poll());//ilkini siler ve dondurur
+
+        yemekSirasi.offer("Firdevs");//kapasite yoksa ekler
+        System.out.println(yemekSirasi);
+        System.out.println(yemekSirasi.peek());//bastakini silmeden getirir, liste bossa null dondurur.
+        System.out.println(yemekSirasi);
+        System.out.println(yemekSirasi.element());// yine silmeden ilk elementi getirir ama liste bossa exception
+
+
+
     }
 }
