@@ -108,5 +108,31 @@ public class MapMethodlar {
 
 
     }
+
+    public static Map<Integer, String> numaraileUpdateEt(Map<Integer, String> ogrenciMap, int numara, String yeniSoyad) {
+        //numarası verilen ogrencinin soyisimini yeni verilen deger ile update edin
+        //ogrencinin valuesini  kaydet 102=Veli-Cem-10-K-TM,
+
+        String value =ogrenciMap.get(numara);
+
+        //sonra split ile ayırmalıyız.[Veli,Cem,10,K,TM]
+        String[] valueArr =value.split("-");
+
+        // bu arrayda soy isim olarak yeni soy ismi atayabiliriz.[Veli,Han,10,K,TM]
+        valueArr[1]=yeniSoyad;
+        //bu arraydaki  guncel bilgileri value yapısına uygun olarak yeniden birlestirmeliyiz.
+        value =valueArr[0]+"-"+valueArr[1]+"-"+valueArr[2]+"-"+valueArr[3]+"-"+valueArr[4];
+
+        ogrenciMap.put(numara,value);//keyler unique oldugu icin aynı seyi iki defa eklemez
+        //eskisini siler yenisini ekler.
+
+        //ogrenciyi yeni valuesu ile map ekleyelim.
+
+
+
+
+
+        return ogrenciMap;
+    }
 }
 
