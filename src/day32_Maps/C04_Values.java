@@ -27,7 +27,7 @@ public class C04_Values {
         //istenen sınıftaki tum ogrencilerin isim ve soyisimlerini yazdırın
 
             MapMethodlar.istenenSiniftakiOgrencileriYazdir(ogrenciMap,10);
-
+                    //odev
             //verilen soyisme sahip tum ogrencileri yazdirin
             //verilen subedeki tum ogrencileri yazdırın
             //verilen sınif ve subedeki tum ogrencileri yazdirin

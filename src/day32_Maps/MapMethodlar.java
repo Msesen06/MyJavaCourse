@@ -30,7 +30,7 @@ public class MapMethodlar {
         ogrenciMap.put(103,"Ali-Cem-11-K-TM");
         ogrenciMap.put(104,"Ayse-Can-10-H-MF");
         ogrenciMap.put(105,"Sevgi-Can-10-K-MF");
-        ogrenciMap.put(105,"Sevda-Cem-12-H-TM");
+        ogrenciMap.put(105,"Sevda-Cem-11-H-TM");
 
 
         return ogrenciMap;
