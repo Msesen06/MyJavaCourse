@@ -30,6 +30,7 @@ public class C03_Keys {
             siraNo++;
         }
         //tum ogrencilerin isim ve soyisimlerini bir liste olarak yazdıran bir method olusurturun
+       MapMethodlar.tumOgrencileriYazdir(ogrenciMap);
 
     }
 }

@@ -1,7 +1,6 @@
 package day32_Maps;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class MapMethodlar {
     //bu methodda static methodlar olusturalım. heryerden ulasabilelim
@@ -35,6 +34,79 @@ public class MapMethodlar {
 
 
         return ogrenciMap;
+    }
+
+    public static void tumOgrencileriYazdir(Map<Integer, String> ogrenciMap){
+        //tum ogrencilerin isim ve soyisimlerini bir liste olarak yazdıran bir method olusurturun
+         Set<Integer> ogrenciKeySeti =ogrenciMap.keySet();//[101, 102, 103, 104, 105]
+         // tum keyleri ele alıp o keye ait ad ve soyadı yukarıdak i methodu kullnarak yazdıralım
+
+        int siraNo =1;
+        for (Integer eachKey:ogrenciKeySeti
+             ) {
+            System.out.println(siraNo+" "+numaraIleOgrenciBulma(ogrenciMap, eachKey));
+            siraNo++;
+        }
+
+
+    }
+
+    public static void istenenSiniftakiOgrencileriYazdir(Map<Integer, String> ogrenciMap, int sinif) {
+        //istenen sınıftaki tum ogrencilerin isim ve soyisimlerini yazdırın
+
+        //valueları kaydedelim
+
+        Collection<String> valueCollection =ogrenciMap.values();
+        int siraNo =1;
+        for (String eachValue: valueCollection
+             ) {
+            //herbir value yi split edip class bilgisini kontrol etmemiz gerekir
+
+            String[] eachValueArr =eachValue.split("-");
+
+            //arraydan sinif bilgisini kontrol edip istenen sinif degerine
+            //esit ise isim ve soy isim degerlerini yazdıralım
+
+            if (eachValueArr[2].equals(sinif+"")){
+                System.out.println(siraNo+"- " +eachValueArr[0]+" "+eachValueArr[1]+" "+eachValueArr[2]);
+                siraNo++;
+
+            }
+        }
+
+    }
+
+    public static void numaraAraligindakiOgrencileriYazdir(Map<Integer, String> ogrenciMap, int basNo, int bitNo) {
+        //ogrenci numarası verilen iki deger arasında olan sınırlar dahil tum ogrencilerin
+        //numara isim ve soyisim ve bolumlerini yazdirin
+
+        if (basNo==bitNo ||basNo>bitNo){
+            System.out.println("dogru deger girilmedi");
+        }
+        //ogrencileri numaralarına gore kontrol etmek icin tum keyleri alalım
+        Set<Integer> ogrenciKeySeti = ogrenciMap.keySet();//[101, 102, 103, 104, 105]
+
+        int siraNo=1;
+        for (Integer eachKey:ogrenciKeySeti
+             ) {
+            if (basNo<=eachKey && eachKey<= bitNo){
+                //istenen aralıktaki  key'ler buraya
+                //burada o keye ait isim soy isim ve bolume ulasmalıyım
+
+                String value =ogrenciMap.get(eachKey);
+
+                String[] valueArr=value.split("-");
+
+                System.out.println(siraNo +"- "+eachKey +" "+
+                        valueArr[0]+" "+
+                        valueArr[1]+" "+
+                        valueArr[4]);
+
+                siraNo++;
+            }
+        }
+
+
     }
 }
 
