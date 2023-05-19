@@ -11,5 +11,7 @@ public class C03_3MayisTeamCalismasi {
         String girilen=scanner.nextLine();
         String yeniMetin =girilen.replaceAll("[aeouAEOU]","");
         System.out.println(yeniMetin);
+
+
     }
 }
