@@ -128,10 +128,6 @@ public class MapMethodlar {
 
         //ogrenciyi yeni valuesu ile map ekleyelim.
 
-
-
-
-
         return ogrenciMap;
     }
 }
