@@ -17,7 +17,7 @@ public class C06_SetSoru {
         }
         System.out.println(sayilarSeti);//[0, 1, 2, 3, 4, 5, 6, 7, 8]
 
-        //arrayi bu elementlerle gunclleyelim
+        //arrayi bu elementlerle guncelleyelim
         sayilar =new Integer[sayilarSeti.size()];
 
         int index =0;
