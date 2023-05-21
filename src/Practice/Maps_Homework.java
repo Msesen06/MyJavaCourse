@@ -2,6 +2,7 @@ package Practice;
 
 import day32_Maps.MapMethodlar;
 
+import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
 
@@ -23,6 +24,17 @@ public class Maps_Homework {
                 105=Sevda-Cem-12-H-TM}
 
           */
+        Collection<String> values =ogrenciMap.values();
+        int sayac =1;
+        for (String each:values
+             ) {
+
+            String[] valueArr =each.split("-");
+            if (valueArr[1].equalsIgnoreCase("can")){
+                System.out.println(sayac+ "==>"+each);
+               sayac++;
+            }
+        }
 
         System.out.println(ogrenciMap);
         //verilen soyisme sahip tum ogrencileri yazdirin
