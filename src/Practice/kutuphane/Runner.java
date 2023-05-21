@@ -1,6 +1,6 @@
 package Practice.kutuphane;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Runner {
 
@@ -20,6 +20,21 @@ public class Runner {
              ) {
             System.out.println("Kitap adı :"+kitap.getKitapAdi()+ " ----> Yazarı :"+kitap.getYazar());
         }
+
+        //burada kitaplar map'e eklendi
+        Map<Integer,String> okunacakKitaplar =new HashMap<>();
+        int sayac =1;
+        for (Kitap kitap: kutuphane.getKitaplar()
+             ) {
+            okunacakKitaplar.put(sayac,kitap.getKitapAdi()+"-"+kitap.getYazar());
+            sayac++;
+        }
+        System.out.println(okunacakKitaplar);
+
+        Set<Integer> keySet =okunacakKitaplar.keySet();
+        String secilenKitap = okunacakKitaplar.get( (int) (Math.random()* okunacakKitaplar.size()));
+        System.out.println(secilenKitap);
+
     }
 
 }
