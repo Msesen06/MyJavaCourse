@@ -7,7 +7,7 @@ public class Runner {
 
     public static void main(String[] args) {
         Kutuphane kutuphane =new Kutuphane();
-        Kitap kitap1 =new Kitap("Kürk Mantolu Madonna","Sabattin Ali");
+        Kitap kitap1 =new Kitap("Kürk Mantolu Madonna","Sabahattin Ali");
         Kitap kitap2 =new Kitap("Suc ve Ceza","Dostoyevski");
         Kitap kitap3 =new Kitap("Mavi ve Siyah","H.Ziya Usakligil");
         Kitap kitap4 =new Kitap("Kırmızı ve Siyah","Stendhal");
@@ -27,10 +27,19 @@ public class Runner {
             okunacakKitaplar.put(sayac,kitap.getKitapAdi()+"-"+kitap.getYazar());
             sayac++;
         }
-        System.out.println(okunacakKitaplar);
 
-        String secilenKitap = okunacakKitaplar.get( (int) (Math.random()* okunacakKitaplar.size()));
-        System.out.println(secilenKitap);
+        for (Integer each: okunacakKitaplar.keySet()
+             ) {
+            String value = okunacakKitaplar.get(each);
+            String [] array =value.split("-");
+            System.out.println(each +"- Kitap adı :"+array[0] +" Kitap yazarı: "+array[1]);
+
+        }
+        System.out.println(okunacakKitaplar);
+        int deger = (int) (Math.random()*okunacakKitaplar.size()+1);
+        String secilenKitap = okunacakKitaplar.get(deger);
+
+        System.out.println(deger+" kitap :"+secilenKitap);
     }
 
 }
