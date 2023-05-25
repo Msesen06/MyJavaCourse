@@ -141,7 +141,7 @@ public class MapMethodlar {
        //bu sekilde tek for each ile hem key hem de valueye ulasbilecegiz.
         System.out.println(ogrenciEntrySeti);
 
-        System.out.println("No   Isim   Soyisim   sınıf");
+        System.out.println("No      Isim    Soyisim     Sınıf");
         System.out.println("----------------------------------");
 
         for (Map.Entry<Integer,String> eachEntry: ogrenciEntrySeti
@@ -149,8 +149,8 @@ public class MapMethodlar {
             String ogrenciValuesi =eachEntry.getValue();//101=Ali-Can-11-H-MF
             String[] ogrenciValuearr =ogrenciValuesi.split("-");//[Ali, Can ,11, H ,MF]
 
-            System.out.println(eachEntry.getKey()+" "+ogrenciValuearr[0]+" "+
-            ogrenciValuearr[1]+" "+ogrenciValuearr[2]);
+            System.out.println(eachEntry.getKey()+"\t"+ogrenciValuearr[0]+"\t"+
+            ogrenciValuearr[1]+"\t"+ogrenciValuearr[2]);
 
         }
      /*
@@ -179,8 +179,6 @@ public class MapMethodlar {
 
                 if (sinif<12){
                     sinif++;
-
-
                     eachValueArr[2]=""+sinif;
                 }else {
                     eachValueArr[2]="Mezun";
