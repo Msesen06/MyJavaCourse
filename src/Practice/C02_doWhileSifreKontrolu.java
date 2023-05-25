@@ -61,7 +61,7 @@ public class C02_doWhileSifreKontrolu {
         }
 
         if (sifre.length() < 8) {
-            System.out.println(" en az 8 karakter olmalı");
+            System.out.println("en az 8 karakter olmalı");
             dogruMu = false;
         }
 
