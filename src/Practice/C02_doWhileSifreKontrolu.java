@@ -32,7 +32,7 @@ public class C02_doWhileSifreKontrolu {
                     System.out.println("sifre guclu");
                 }
 
-                System.out.println("Sifreniz kabul edilmistir");
+                System.out.println("Sifreniz kabul edilmistir. Giris basarılı");
             }
 
         } while (!DogruMu);
