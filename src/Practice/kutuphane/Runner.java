@@ -12,7 +12,7 @@ public class Runner {
         Kitap kitap3 =new Kitap("Mavi ve Siyah","H.Ziya Usakligil");
         Kitap kitap4 =new Kitap("Kırmızı ve Siyah","Stendhal");
         Kitap kitap5 =new Kitap("Yalnızız","Peyami Safa");
-        Kitap kitap6 =new Kitap("Kaşağı","Ömer Seyfettin");
+        Kitap kitap6 =new Kitap("Tutunamayanlar","Oğuz Atay");
         kutuphane.kitapEkle(kitap1);
         kutuphane.kitapEkle(kitap2);
         kutuphane.kitapEkle(kitap3);
@@ -36,6 +36,8 @@ public class Runner {
             System.out.println(each +"- Kitap adı :"+array[0] +" Kitap yazarı: "+array[1]);
         }
         System.out.println(okunacakKitaplar);
+
+
         int deger = (int) (Math.random()*okunacakKitaplar.size()+1);
         System.out.println(deger);
         String secilenKitap = okunacakKitaplar.get(deger);
