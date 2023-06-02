@@ -28,6 +28,7 @@ public class Runner {
             okunacakKitaplar.put(sayac,kitap.getKitapAdi()+"-"+kitap.getYazar());
             sayac++;
         }
+        System.out.println(okunacakKitaplar);
 
         for (Integer each: okunacakKitaplar.keySet()
              ) {
@@ -36,7 +37,6 @@ public class Runner {
             System.out.println(each +"- Kitap adı :"+array[0] +" Kitap yazarı: "+array[1]);
         }
         System.out.println(okunacakKitaplar);
-
 
         int deger = (int) (Math.random()*okunacakKitaplar.size()+1);
         System.out.println(deger);
