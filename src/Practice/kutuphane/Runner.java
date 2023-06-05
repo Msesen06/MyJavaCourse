@@ -22,13 +22,13 @@ public class Runner {
 
         //burada kitaplar map'e eklendi
         Map<Integer,String> okunacakKitaplar =new HashMap<>();
-        int sayac =1;
+        int key =1;
         for (Kitap kitap: kutuphane.getKitaplar()
              ) {
-            okunacakKitaplar.put(sayac,kitap.getKitapAdi()+"-"+kitap.getYazar());
-            sayac++;
+            okunacakKitaplar.put(key,kitap.getKitapAdi()+"-"+kitap.getYazar());
+            key++;
         }
-        System.out.println(okunacakKitaplar);
+        System.out.println("kitaplar :"+okunacakKitaplar);
 
         for (Integer each: okunacakKitaplar.keySet()
              ) {
