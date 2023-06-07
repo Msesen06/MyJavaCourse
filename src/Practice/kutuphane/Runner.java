@@ -20,6 +20,10 @@ public class Runner {
         kutuphane.kitapEkle(kitap5);
         kutuphane.kitapCikar(kitap6);
 
+        for (Kitap kitap: kutuphane.getKitaplar()
+             ) {
+            System.out.println(kitap.getKitapAdi() +"-"+kitap.getYazar());
+        }
         //burada kitaplar map'e eklendi
         Map<Integer,String> okunacakKitaplar =new HashMap<>();
         int key =1;
@@ -30,19 +34,17 @@ public class Runner {
         }
         System.out.println("kitaplar :"+okunacakKitaplar);
 
-        for (Integer each: okunacakKitaplar.keySet()
-             ) {
-            String value = okunacakKitaplar.get(each);
-            String [] array =value.split("-");
-            System.out.println(each +"- Kitap adı :"+array[0] +" Kitap yazarı: "+array[1]);
-        }
-        System.out.println(okunacakKitaplar);
-
         int deger = (int) (Math.random()*okunacakKitaplar.size()+1);
         System.out.println(deger);
+        /*
+        for (int i = 0; i < 10; i++) {
+            int deger1 = (int) (Math.random()*5) +1;
+            System.out.println(deger1);
+        }
+         */
         String secilenKitap = okunacakKitaplar.get(deger);
 
-        System.out.println(deger+". kitap :"+secilenKitap);
+        System.out.println("Okuyacağınız kitap :"+secilenKitap);
     }
 
 }
