@@ -19,7 +19,7 @@ public class Runner {
         kutuphane.kitapEkle(kitap4);
         kutuphane.kitapEkle(kitap5);
         kutuphane.kitapCikar(kitap6);
-
+        System.out.println(kutuphane.getKitaplar().get(0).getYazar());
         for (Kitap kitap: kutuphane.getKitaplar()
              ) {
             System.out.println(kitap.getKitapAdi() +"-"+kitap.getYazar());
