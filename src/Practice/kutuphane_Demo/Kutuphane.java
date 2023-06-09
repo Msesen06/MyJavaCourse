@@ -1,12 +1,12 @@
-package Practice.kutuphane;
+package Practice.kutuphane_Demo;
 
 import java.util.ArrayList;
 
 public class Kutuphane {
     private ArrayList<Kitap> kitaplar;
 
-    public Kutuphane() {
-        kitaplar = new ArrayList<>();
+    public Kutuphane(){
+        kitaplar =new ArrayList<>();
     }
 
     public void kitapEkle(Kitap kitap){
@@ -16,7 +16,7 @@ public class Kutuphane {
         kitaplar.remove(kitap);
     }
 
-    public ArrayList<Kitap> kitaplariListele() {
+    public ArrayList<Kitap> getKitaplar() {
         return kitaplar;
     }
 }

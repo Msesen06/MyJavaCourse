@@ -1,4 +1,4 @@
-package Practice.kutuphane;
+package Practice.kutuphane_Demo;
 
 public class Kitap {
     private String kitapAdi;
@@ -17,10 +17,4 @@ public class Kitap {
         return yazar;
     }
 
-    @Override
-    public String toString() {
-        return "kitapAdi=" + kitapAdi + '\'' +
-                ", yazar='" + yazar + '\''
-               ;
-    }
 }
